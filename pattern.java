@@ -31,17 +31,115 @@ public class pattern {
 
     
     public static void eo(int maxE){
-        String capE = "E";
-        String capO = "O";
-        if(maxE%2==0){
-            System.out.println(capE);
-            for(int i =0 ; i< maxE ;i++){
+        String letter = "";
+        if (maxE % 2 == 0)
+        {
+            System.out.println("********");
+            for (int i = 1;i<= maxE; i++){
+                //System.out.println( i + " "+ i%2);
+                System.out.println();
+                if(i%2 == 1) {
+                    letter ="O "; 
+                    for(int j = 0; i>j ; j++){
+                    System.out.print(letter); 
+                    }
+                }
+                 else if(i%2 == 0){
+                    letter = "E ";
+                    for(int j = 0; i>j ; j++){
+                        System.out.print(letter);
+                    }
+                }
+            } 
+                
             }
-        }
-        else {
-            for (int i = 0;i < maxE ;i++){}
-        }
+         else{
+            System.out.println("********");
+                for (int i = 1;i<= maxE; i++){
+                        //System.out.println( i + " "+ i%2);
+                    System.out.println();
+                    if(i%2 == 1) {
+                        letter ="E "; 
+                        for(int j = 0; i>j ; j++){
+                            System.out.print(letter); 
+                        }
+                    }
+                    else if(i%2 == 0){
+                        letter = "O ";
+                        for(int j = 0; i>j ; j++){
+                            System.out.print(letter);
+                        }
+                    }
+                } 
+                 
+            }
+       
+        //// dESSSSSSING////
+        /// 
+        /// 
+        /// 
+        if (maxE % 2 == 0)
+        {
+           // System.out.println("********");
+            for (int i = (maxE-1);i> 0; i--){
+                //System.out.println( i + " "+ i%2);
+                System.out.println();
+                if(i%2 == 1) {
+                    letter ="O "; 
+                    for(int j = 0; i>j ; j++){
+                    System.out.print(letter); 
+                    }
+                }
+                 else if(i%2 == 0){
+                    letter = "E ";
+                    for(int j = 0; i>j; j++){
+                        System.out.print(letter);
+                    }
+                }
+            } 
+                
+            }
+         else{
+            //System.out.println("********");
+                for (int i = (maxE-1);i> 0; i--){
+                        //System.out.println( i + " "+ i%2);
+                    System.out.println();
+                    if(i%2 == 1) {
+                        letter ="E "; 
+                        for(int j = 0; j< i ; j++){
+                            System.out.print(letter); 
+                        }
+                    }
+                    else if(i%2 == 0){
+                        letter = "O ";
+                        for(int j = 0; j< i; j++){
+                            System.out.print(letter);
+                        }
+                    }
+                } 
+                 
+            }
+            
     }
+
+
+
+
+    public static void pyramid(int rows){
+        for(int i = 0; i< rows; i++){
+            for (int j = 0; j < i;j++){
+                System.out.print("  ");
+            }
+            for (int k  = 0; k< ((2*(rows)))-((2*(i))+1); k++ ){
+                System.out.print( i + 1 +" ");
+
+            }
+            System.out.println();
+        }
+
+    
+    }
+
     
 
 
@@ -54,5 +152,13 @@ public class pattern {
         System.out.println();
         System.out.println();
         eo(6);
+        System.out.println();
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        pyramid(100);
     }
 }
